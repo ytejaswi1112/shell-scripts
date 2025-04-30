@@ -1,7 +1,7 @@
 #!/bin/bash
-USERID=$(id-u)
+USERID=$(id -u)
 
-if [ $USERID -ne 0]
+if [ $USERID -ne 0 ]
 then 
 echo "you are not super user so get the root access"
 exit 1
@@ -9,7 +9,8 @@ else
 echo "you are super user"
 fi
 
-yum install mysql -y
+touch logs
+yum install mysql -y >> logs
 
 if [ $? -ne 0]
 then
@@ -19,7 +20,7 @@ else
 echo "Mysql is installed"
 fi
 
-yum install git -y
+yum install git -y >> logs
 
 if [ $? -ne 0]
 then
