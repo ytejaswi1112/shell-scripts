@@ -12,7 +12,7 @@ fi
 touch logs
 yum install mysql -y >> logs
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
 echo "mysql is installation failed"
 exit 1
@@ -22,7 +22,7 @@ fi
 
 yum install git -y >> logs
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
 echo "git is installation failed"
 exit 1
