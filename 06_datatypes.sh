@@ -3,6 +3,6 @@
 N1=$1
 N2=$2
 
-SUM=$(($N1+$N2))
+SUM=$(($N1 + $N2))
 
-echo "The sum of $N1 & $N2 is $SUM"
+echo "The sum of $N1 and $N2 is $SUM"
