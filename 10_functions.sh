@@ -25,3 +25,7 @@ yum install mysql -y &>>$LOGFILE
 VALIDATE $? "Installation of MYSQL"
 yum install git -y &>>$LOGFILE
 VALIDATE $? "Installation of GIT"
+
+#git add 10_functions.sh
+#git commit -m "Your message about changes"
+#git pull
