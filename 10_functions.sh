@@ -1,0 +1,24 @@
+#/bin/bash
+USERID=$(id -u)
+if [ $USERID -ne 0 ]
+then
+echo "user is not superuser "
+exit 1
+else
+echo"user is super user"
+fi
+yum install mysql -y &>>$LOGFILE
+if [ $? -ne 0 ]
+then
+echo "Mysql installation failed"
+exit 1
+else
+echo "MYSQL installation success"
+yum install git -y &>>$LOGFILE
+if [ $? -ne 0 ]
+then
+echo "Git installation failed"
+exit 1
+else
+echo "Git installation success"
+fi
