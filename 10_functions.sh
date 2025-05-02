@@ -1,6 +1,6 @@
 #/bin/bash
 USERID=$(id -u)
-TIMESTAMP=$(date +%F -%H -%M -%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/home/ec2-user/devops/shell-scripts/$SCRIPTNAME_$TIMESTAMP.log
 
