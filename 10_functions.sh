@@ -21,9 +21,7 @@ exit 1
 else
 echo "user is super user"
 fi
-
 yum install mysql -y &>>$LOGFILE
-VALIDATE $? "Installation of MYSQL"
-
+VALIDATE $? echo "Installation of MYSQL"
 yum install git -y &>>$LOGFILE
-VALIDATE $? "Installation of GIT"
+VALIDATE $? echo "Installation of GIT"
