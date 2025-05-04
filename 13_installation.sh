@@ -2,7 +2,7 @@
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOGFILE=/home/ec2-user/devops/shell-scripts/($SCRIPT_NAME)-$TIMESTAMP.log
+LOGFILE=/home/ec2-user/devops/shell-scripts/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
