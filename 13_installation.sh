@@ -39,3 +39,4 @@ else
 yum install $i -y &>>$LOGFILE
 VALIDATE $? "! Installation"
 fi
+done
