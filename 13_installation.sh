@@ -29,7 +29,7 @@ echo -e " $G You are super user $N"
 fi
 
 for i in @
-
+do
 echo " package to install: $i "
 yum list installed $i &>>$LOGFILE
 if [ $? -eq 0 ]
