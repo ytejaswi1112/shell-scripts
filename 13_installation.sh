@@ -30,7 +30,7 @@ fi
 
 for i in @
 
-echo "package to install:$i"
+echo " package to install: $i "
 yum list installed $i &>>$LOGFILE
 if [ $? -eq 0 ]
 then
