@@ -2,7 +2,7 @@
 USERID=$(id -u)
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOGFILE=/home/ec2-user/devops/shell-scripts/$SCRIPT_NAME-$TIMESTAMP.log
+LOGFILE=/home/ec2-user/devops/shell-scripts/logs-$TIMESTAMP.log
 
 VALIDATE(){
 if [ $1 -ne 0 ]
@@ -26,6 +26,6 @@ VALIDATE $? "Installation of MYSQL"
 yum install git -y &>>$LOGFILE
 VALIDATE $? "Installation of GIT"
 
-#git add 10_functions.sh
-#git commit -m "Your message about changes"
-#git pull
+#git add 13_installation.sh 
+git commit -m "Your message about changes"
+git pull
